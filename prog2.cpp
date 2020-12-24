@@ -1,10 +1,14 @@
 #include<iostream>
+#include<string.h>
 using namespace std;
+
 int main()
 {
-    int i,j,k;
-    i=4;
-    j=9;
-    k=8;
-    cout<<i+j+k;
+        char str[20];
+        cout<<"\nEnter any String :: ";
+        cin>>str;
+        cout<<"\nThe Entered String is  "<<str;
+
+        return 0;
 }
+
