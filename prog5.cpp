@@ -2,9 +2,13 @@
 using namespace std;
 int main()
 {
-    int i,j,sum;
-    i=3+8;
-    j=i+2;
-    sum=i+j;
-    cout<<"your defiend total sum is "<<sum;
+    int num;
+    cout<<"Enter first number:";
+    cin >> num;
+    cout<<"This is a  your enterd number:"<<num<<endl;
+    char ch;
+    ch=num;;
+    cout<<"This is your ASCII value:"<<ch<<endl;
+    num=ch;
+    cout<<"This is your again enterd value:"<<num<<endl;
 }
