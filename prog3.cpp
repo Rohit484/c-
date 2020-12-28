@@ -1,19 +1,22 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
+class Demo
+{
+    int num =10;
+    friend class Test; //Declaration friend class.
+};
+class Test
+{
+  public:
+    void show(Demo &a)
+    {
+        cout<<"value of Num is : "<<a.num;
+    }
+};
 int main()
 {
-    char i,k,l;
-    char a,b;
-    cout<<"enter a your numer";
-    cin>>a;
-    cout<<"enter your second number";
-    cin>>b;
-    cout<<"\nyour value is "<<a<<b;
-
-    i=65;
-    k=40;
-    l=67;
-
-
-    cout<<"\nyou enter a number is "<<i<<k<<l;
+    Demo a;
+    Test b;
+    b.show(a);
+    return 0;
 }
