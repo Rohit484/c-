@@ -2,21 +2,19 @@
 using namespace std;
 int main()
 {
-    int n;
-    cout<<"Enter your number";
-    cin>>n;
-    if(n>0)
+    int no;
+    cout<<"Enter the number:";
+    cin>>no;
+    if(no>0)
     {
-        cout<<"you enterd a positive number"<<n<<endl;
-    }
-    else if(n<0)
-    {
-        cout<<"you enter a negative number"<<n;
+        if(no%2==0)
+        {
+            cout<<"You Enterd a positive:-"<<no<<endl;
+        }
+        else if(no%2==1)
+            cout<<"You enterd a odd:-"<<no<<endl;
 
     }
-    else
-        cout<<"you enterd  0.";
-    cout<<"this line is always printed";
-
-
+     else
+                cout<<"You Enterd a value is:-"<<no<<endl;
 }

@@ -1,9 +1,10 @@
+//Relational Operators
+
 #include<iostream>
 using namespace std;
 int main()
 {
     int a,b;
-    bool result;
     cout<<"Enter the two value: "<<endl;
     cin>>a>>b;
     cout<<"Your double equal is (a==b):-"<<(a==b)<<endl;
