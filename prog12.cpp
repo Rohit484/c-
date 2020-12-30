@@ -2,21 +2,13 @@
 using namespace std;
 int main()
 {
-    int n1,n2,n3;
-    cout<<"enter your three number ";
-    cin>>n1>>n2>>n3;
-    if(n1>=n2 &&n1>=n3)
+    int no;
+    cout<<"Enter your even number"<<endl;
+    cin>>no;
+    if(no%2==0)
     {
-        cout<<"\nthe number is largest"<<n1;
+        cout<<"You Enterd a positive number"<<no<<endl;
     }
-    else if(n2>=n2 && n2>=n3)
-    {
-        cout<<"\nLargest number is "<<n2;
-    }
-    else if(n3>=n1 && n3>=n2)
-    {
-        cout<<"\n Largest number is "<<n3;
-    }
-
+    else
+    cout<<"odd number"<<endl;
 }
-
