@@ -1,28 +1,25 @@
-
 #include<iostream>
 using namespace std;
-class AddAmount
+class AddAmmount
 {
+    int no,ad;
 public:
-    int amount;
-
-    AddAmount()
+    void mini()
     {
-        amount=50;
-        cout<<"Your Total Bank Balance is:- "<<amount<<endl;
+        no=50;
+        cout<<"\n Your Minimum Bank Balance is:-"<<no;
     }
-    AddAmount( int dollor)
+    void add()
     {
-        dollor+=amount;
-        cout<<"Your total Bank Balance is:- "<<dollor<<endl;
+        cout<<"\n Enter the Ammont For add to bank Balance Sheet:-";
+        cin>>ad;
+        no+=ad;
+        cout<<"\n Your Now total Bank Balance is:- "<<no;
     }
 };
 int main()
 {
-    AddAmount c1;
-
-    int d;
-    cout<<"Add the bank balance"<<d;
-    cin>>d;
-    AddAmount c2(700);
+    AddAmmount bm;
+    bm.mini();
+    bm.add();
 }
