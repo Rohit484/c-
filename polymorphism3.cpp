@@ -13,7 +13,7 @@ class child: public base
   public:
       void show()
       {
-          base::show();
+          //base::show();
           cout<<"\n Show of child";
       }
 };
