@@ -13,9 +13,9 @@ public:
     {
         cout<<"\n String is "<<str;
     }
-    void operator ==(text t)
+    void operator ==(text w)
     {
-        int r=strcmp(str,t.str);
+        int r=strcmp(str,w.str);
         if(r==0)
         {
             cout<<"\n Same string ";
