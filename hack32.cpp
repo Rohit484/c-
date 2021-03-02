@@ -1,42 +1,44 @@
+#include <map>
+#include <set>
+#include <list>
 #include <cmath>
+#include <ctime>
+#include <deque>
+#include <queue>
+#include <stack>
+#include <string>
+#include <bitset>
 #include <cstdio>
+#include <limits>
 #include <vector>
+#include <climits>
+#include <cstring>
+#include <cstdlib>
+#include <fstream>
+#include <numeric>
+#include <sstream>
 #include <iostream>
 #include <algorithm>
+#include <unordered_map>
+
 using namespace std;
 
 int main()
 {
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
 
-    int N;
-    cin >> N;
+ int n;
+ cin >> n;
 
-    for (int i = 0; i < N; i++)
-	{
-        string str;
-        cin >> str;
+ vector<int> arr(n);
 
-        for (int j = 0; j < str.length(); j++)
-		{
-            if (j % 2 == 0)
-            {
-            	cout << str[j];
-			}
-        }
+ for(int arr_i = 0;arr_i < n;arr_i++)
+{
+       cin >> arr[arr_i];
+}
 
-        cout << " ";
-
-        for (int j = 0; j < str.length(); j++)
-		{
-            if (j % 2 != 0)
-            {
-            	cout << str[j];
-			}
-        }
-
-        cout << endl;
-    }
-
+for(int arr_i = n-1;arr_i >= 0;arr_i--)
+{
+       cout << arr[arr_i]<<" ";
+}
     return 0;
 }
