@@ -1,14 +1,24 @@
 #include<iostream>
 using namespace std;
-int main ()
-{
-    int b,h;
-    float a;
-    cout<<" enter a base ";
-cin>>b;
-cout<<"enter a height";
-cin>>h;
+#include<bits/stdc++.h>
+#define mp make_pair
+#define pb push_back
+#define ll long long
+//using namespace std;
+int n,d,m,a[105],s[105],ans;
+int main(){
 
-    a=0.5*b*h;
-    cout<<"\n result"<<a;
+cin>>n;
+for(int i=1;i<=n;i++){
+cin>>a[i];
+s[i]=s[i-1]+a[i];
+}
+cin>>d>>m;
+
+for(int i=m;i<=n;i++)
+if(s[i]-s[i-m]==d)
+ans++;
+cout<<ans<<endl;
+
+return 0;
 }
