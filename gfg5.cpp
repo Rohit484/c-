@@ -1,39 +1,34 @@
 #include<iostream>
 using namespace std;
-struct Node
+void insert(struct TrieNode *root, string key)
 {
-    int data;
-    struct Node* left;
-    struct Node* right;
-
-    Node(int x){
-        data = x;
-        left = right = NULL;
+    // code here
+    int n = key.size();
+    for(int i=0; i<n; i++){
+        if(root->children[key[i]-'a'] == nullptr){
+            root->children[key[i]-'a'] = getNode();
+            root = root->children[key[i]-'a'];
+        }
+        else{
+            root = root->children[key[i]-'a'];
+        }
     }
-};
+    root->isLeaf = true;
 
-class Solution
+}
+
+//Function to use TRIE data structure and search the given string.
+bool search(struct TrieNode *root, string key)
 {
-    public:
-    Node* lca(Node* root ,int n1 ,int n2 )
-   {
-      if(root==NULL){
-          return root;
-      }
-      if(root->data==n1 || root->data==n2){
-          return root;
-
-      }
-      Node* lca1=lca(root->left,n1,n2);
-      Node* lca2=lca(root->right,n1,n2);
-      if(lca1!=NULL && lca2!=NULL){
-          return root;
-      }
-      if(lca1!=NULL){
-          return lca1;
-       }
-       else{
-           return lca2;
-       }
-   }
-};
+    // code here
+    int n = key.size();
+    for(int i=0; i<n; i++){
+        if(root->children[key[i]-'a'] == nullptr){
+            return false;
+        }
+        else{
+            root = root->children[key[i]-'a'];
+        }
+    }
+    return (root->isLeaf);
+}

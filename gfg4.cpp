@@ -1,40 +1,18 @@
 #include<iostream>
 using namespace std;
-struct Node
-{
-    int data;
-    Node* left;
-    Node* right;
-};
-*/
-class Solution
-{
-    public:
-
-    map<int,pair<int,int>> mp;
-    void findtop(Node *root,int hl,int l){
-        if(!root) return;
-        findtop(root->left,hl-1,l+1);
-        if(mp.find(hl)!=mp.end()){
-            if(mp[hl].first>l){
-                mp[hl]={l,root->data};
-            }
-        }else{
-            mp[hl]={l,root->data};
-        }
-
-        findtop(root->right,hl+1,l+1);
-    }
-    vector<int> topView(Node *root)
-    {
-          mp.clear();
-          vector<int> res;
-          findtop(root,0,0);
-
-            for(auto x:mp){
-              res.push_back(x.second.second);
-          }
-          return res;
-    }
-
+class Solution{
+public:
+	// Function to find maximum product subarray
+	long long maxProduct(vector<int> arr, int n) {
+	    // code here
+	    long long pref = 1, suff = 1, res = INT_MIN;
+	    for(int i=0; i<n; i++) {
+	        pref *= arr[i];
+	        suff *= arr[n-i-1];
+	        res = max(res, max(pref, suff));
+	        if(pref == 0) pref = 1;
+	        if(suff == 0) suff = 1;
+	    }
+	    return res;
+	}
 };
