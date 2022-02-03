@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a=2;
+    //a=4;
+    int b=a+1;
+    if((a=3)==b)
+    {
+        cout<<a<<endl;
+    }
+    else
+        cout<<a+1<<endl;
+}
